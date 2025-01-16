@@ -20,6 +20,7 @@
 #define AVCODEC_AARCH64_CABAC_H
 
 #include "config.h"
+#undef HAVE_INLINE_ASM
 #if HAVE_INLINE_ASM
 
 #include "libavutil/attributes.h"
