@@ -24,10 +24,10 @@ OBJS-$(CONFIG_OPUS_DECODER)             += aarch64/opusdsp_init.o
 OBJS-$(CONFIG_RV40_DECODER)             += aarch64/rv40dsp_init_aarch64.o
 OBJS-$(CONFIG_VC1DSP)                   += aarch64/vc1dsp_init_aarch64.o
 OBJS-$(CONFIG_VORBIS_DECODER)           += aarch64/vorbisdsp_init.o
-OBJS-$(CONFIG_VP9_DECODER)              += aarch64/vp9dsp_init_10bpp_aarch64.o \
-                                           aarch64/vp9dsp_init_12bpp_aarch64.o \
-                                           aarch64/vp9mc_aarch64.o             \
-                                           aarch64/vp9dsp_init_aarch64.o
+OBJS-$(CONFIG_VP9_DECODER)              += ../vp9dsp_init_10bpp_aarch64.o \
+                                           ../vp9dsp_init_12bpp_aarch64.o \
+                                           ../vp9mc_aarch64.o             \
+                                           ../vp9dsp_init_aarch64.o
 
 # ARMv8 optimizations
 
@@ -62,12 +62,12 @@ NEON-OBJS-$(CONFIG_AAC_DECODER)         += aarch64/aacpsdsp_neon.o
 NEON-OBJS-$(CONFIG_DCA_DECODER)         += aarch64/synth_filter_neon.o
 NEON-OBJS-$(CONFIG_OPUS_DECODER)        += aarch64/opusdsp_neon.o
 NEON-OBJS-$(CONFIG_VORBIS_DECODER)      += aarch64/vorbisdsp_neon.o
-NEON-OBJS-$(CONFIG_VP9_DECODER)         += aarch64/vp9itxfm_16bpp_neon.o       \
-                                           aarch64/vp9itxfm_neon.o             \
-                                           aarch64/vp9lpf_16bpp_neon.o         \
-                                           aarch64/vp9lpf_neon.o               \
-                                           aarch64/vp9mc_16bpp_neon.o          \
-                                           aarch64/vp9mc_neon.o
+NEON-OBJS-$(CONFIG_VP9_DECODER)         += ../vp9itxfm_16bpp_neon.o       \
+                                           ../vp9itxfm_neon.o             \
+                                           ../vp9lpf_16bpp_neon.o         \
+                                           ../vp9lpf_neon.o               \
+                                           ../vp9mc_16bpp_neon.o          \
+                                           ../vp9mc_neon.o
 NEON-OBJS-$(CONFIG_HEVC_DECODER)        += aarch64/hevcdsp_deblock_neon.o      \
                                            aarch64/hevcdsp_idct_neon.o         \
                                            aarch64/hevcdsp_init_aarch64.o      \
